@@ -1,0 +1,32 @@
+@use 'Library';
+.maincoopsdiv{
+    margin: auto;
+    width: 80%;
+
+    padding-top: 100px;
+}
+.coopsheader{
+    text-align: center;
+    font-family: Library.$main-header-font;
+    font-size: 24px;
+}
+.coopsdiv{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.firmlogo{
+    max-height: 40px;
+    margin: auto;
+    margin-right:20px;
+}
+@media (max-width:480px){
+
+.coopsdiv{
+    width: 300px;
+    flex-wrap: wrap;
+}
+
+}
