@@ -10,10 +10,6 @@ const textLinks = [
     href: "/"
   },
   {
-    text: "OFERTA  ",
-    href: "/projects"
-  },
-  {
     text: "O NAS",
     href: "/about"
   },
@@ -122,23 +118,23 @@ export default function Navbar({ dark, cream }){
             </Link>
           </li>
           <li key="OFERTA">
-            <Link to={"/projects"}>
+            <Link to={"/about"}>
             <div className="lidiv">
               <div className="triangleright"></div>
 
-              <a className="link">OFERTA</a>
+              <a className="link">O NAS</a>
               </div>
 
             </Link>
           </li>
-          <li key="O NAS">
+          {/* <li key="O NAS">
             <Link to={"/about"}>
-              
+            <div className="triangleright"></div>
               <a className="link">O NAS</a>
               
               
             </Link>
-          </li>
+          </li> */}
           <li key="KONTAKT">
             <Link to={"/contact"}>
               <a className="link">KONTAKT</a>

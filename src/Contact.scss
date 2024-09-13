@@ -1,4 +1,7 @@
 @use 'Library';
+.maincontactdiv{
+    
+}
 .contactheader{
     font-family: Library.$main-header-font;
     text-align: center;
@@ -8,17 +11,19 @@
 .formmaindiv{
     margin: auto;
     
+    
 }
 .contact-form {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    
     background: #f3f3f3;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    margin-bottom: 100px;
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 
 .contact-form h2 {

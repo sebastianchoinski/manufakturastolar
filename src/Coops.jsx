@@ -13,7 +13,6 @@ import './Coops.scss'
 const Coops = () => {
     return ( 
         <div className='maincoopsdiv'>
-            <hr></hr>
             <h1 className='coopsheader'>Nasi dostawcy</h1>
             <div className='coopsdiv'>
                 

@@ -8,48 +8,48 @@ export default function Footer(props) {
     return (
         
 <footer className="footer">
+    
     <div className='footerdiv'>
         <div className='footersocialmedia'>
-            <a>
-            <div className='singlesocial'>
-                <a href='https://www.instagram.com/meble_stolarz_warszawa?igsh=aWp5MzZnbjd6dXRh'><img className='socialimage' src={instagram}></img></a>
-                <p className='socialtext'>Instagram</p>
-            
-            
-            </div>
+            <a class="footersociallink">
+                <div className='singlesocial'>
+                    <a class="sociallink" href='https://www.instagram.com/meble_stolarz_warszawa?igsh=aWp5MzZnbjd6dXRh'>
+                        <img className='socialimage' src={instagram} alt="Instagram" />
+                    </a>
+                    <p className='socialtext'>Instagram</p>
+                </div>
             </a>
-            <a><div className='singlesocial'>
-                <a href='https://www.facebook.com/profile.php?id=100063449186451'><img className='socialimage' src={facebook}></img></a>
-                <p className='socialtext'>Facebook</p>
-                
-            </div>
+            <a class="footersociallink">
+                <div className='singlesocial'>
+                    <a class="sociallink" href='https://www.facebook.com/profile.php?id=100063449186451'>
+                        <img className='socialimage' src={facebook} alt="Facebook" />
+                    </a>
+                    <p className='socialtext'>Facebook</p>
+                </div>
             </a>
-
-            <a><div className='singlesocial'>
-                <a href='https://www.tiktok.com/@manufaktura.stola?_t=8jzeJvGGTlh&_r=1'><img className='socialimage' src={tiktok}></img></a>
-                <p className='socialtext'>Tikok</p>
-                
-            </div>
+            <a class="footersociallink">
+                <div className='singlesocial'>
+                    <a class="sociallink" href='https://www.tiktok.com/@manufaktura.stola?_t=8jzeJvGGTlh&_r=1'>
+                        <img className='socialimage' src={tiktok} alt="Tiktok" />
+                    </a>
+                    <p className='socialtext'>Tiktok</p>
+                </div>
             </a>
-
-
         </div>
-
         <div className='footerpages'>
-            <a href='/'>Strona główna</a>
-            <a href='/projects'>Oferta</a>
-            <a href='/about'>O nas</a>
-            <a href='/contact'>Kontakt</a>
-        </div>
+        <a class="footerlink" href='/'>Strona główna</a>
+        <a class="footerlink" href='/projects'>Oferta</a>
+        <a class="footerlink" href='/about'>O nas</a>
+        <a class="footerlink" href='/contact'>Kontakt</a>
+    </div>
         <div className='footerinfo'>
             <p className='socialtext'>Warszawa</p>
             <p className="socialtext">kontakt@manufaktura-stolar.pl</p>
-           
-            
             <a className='socialtext' href="tel:797-953-031">+48 797 953 031</a>
         </div>
-        </div>
+    </div>
 </footer>
+
        
     );
 }

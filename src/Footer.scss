@@ -1,105 +1,133 @@
 @use 'Library';
-.footer{
-    background-color: bisque;
-    height: 100%;
-    margin: 0;
-    margin-top: 60px;
+
+.footer {
+    background-color: Library.$color3; /* Tło stopki */
+    padding: 30px 10px; /* Większy odstęp od krawędzi stopki */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 50px;
 }
-.footerpages{
+
+.footerdiv {
+    display: flex;
+    justify-content: center; /* Wycentrowanie sekcji */
+    align-items: center;
+    gap: 50px;
+    max-width: 800px; /* Maksymalna szerokość dla stopki */
+    margin: 0 auto; /* Wycentrowanie stopki */
+    padding: 20px 0; /* Dodany odstęp wewnętrzny między sekcjami */
+    flex-wrap: wrap; /* Pozwolenie na zawijanie sekcji, jeśli jest to konieczne */
+}
+
+.footerpages {
+    display: flex;
+    flex-direction: row; /* Ustawienie stron w poziomie */
+    align-items: center; /* Wyrównanie linków do środka */
+    justify-content: center; /* Wycentrowanie linków w poziomie */
+    margin-bottom: 20px;
+    text-align: center; /* Wyrównanie tekstu do środka */
+    white-space: nowrap; /* Zapobiega zawijaniu się tekstu */
+    gap: 20px; /* Dodatkowy odstęp między linkami */
+}
+
+.footerlink {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: color 0.3s;
+    margin: 0; /* Usunięto margines, aby zapewnić równomierne odstępy */
+}
+
+.footerlink:hover {
+    color: #000;
+}
+
+.footersocialmedia {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin: auto;
-    width: 100%;
+    align-items: center; /* Wyrównanie ikonek do środka */
+    gap: 20px;
+    text-align: center; /* Wyrównanie tekstu do środka */
 }
-.footerpages a{
+
+.footersociallink {
     text-decoration: none;
-    color: black;
-    font-family: Library.$button-font;
 }
-.footerpages a:hover{
-    color: Library.$color7;
-}
-.footerdiv {
-    
-    color: black;
-    text-align: center;
-    padding: 20px 0;
-    font-family: Library.$number-font;
+
+.singlesocial {
     display: flex;
-    justify-content: space-between;
-    margin: auto;
-    padding: 30px 300px 30px 300px;;
+    align-items: start;
+    justify-content: center; /* Wycentrowanie zawartości */
+    width: 150px;
+    text-align: left;
 }
-.socialimage{
-    width: 20px;
+
+.sociallink {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Wycentrowanie zawartości w ikonie */
+    text-decoration: none;
+    flex-grow: 0; /* Zapewnia równomierne rozłożenie dostępnej szerokości */
+}
+
+.socialimage {
+    width: 30px;
+    height: 30px;
     margin-right: 0px;
-    margin-left: 100px;
+    flex-shrink: 0;
 }
-.singlesocial{
+
+.socialtext {
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+    text-align: center; /* Wyrównanie tekstu do środka */
+    line-height: 30px;
+    white-space: nowrap;
+    flex-grow: 1; /* Wypełnienie pozostałej przestrzeni, aby utrzymać równe wyrównanie */
+}
+
+.footerinfo {
     display: flex;
-    margin: auto;
-    margin-top: 5px;
+    flex-direction: column;
     justify-content: center;
+    align-items: center; /* Wyrównanie tekstu do środka */
+    gap: 10px;
+    text-align: center; /* Wyrównanie tekstu do środka */
 }
-.socialtext{
-    text-align: center;
-    margin: auto;
-    margin-left: 10px;
+
+.footerinfotext {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
     text-decoration: none;
-    color:black;
-    font-family: Library.$button-font;
-    
+    padding: 10px 0; /* Dodanie odstępu między tekstem a krawędzią stopki */
+    text-align: center; /* Wyrównanie tekstu do środka */
 }
-.footerinfo{
-    width: 100%;
-    margin-top: 20px;
-}
-.footersocialmedia{
-    width: 100%;
-    margin-top: 15px;
-}
-.singlesocial:hover{
-    transition: 0.5s;
-    transform: scale(1.1);
-}
-@media (max-width:480px){
-    .footerdiv{
-        display: flex;
-        
-        margin:0;
-        justify-content: space-between;
-        padding: 0;
-        margin:auto;
-        font-size: 12px;
-        margin-right: 0px;
-        padding-right: 0px;
-        padding-left: 00px;
-    }
-    .footerdiv div{
-        margin: auto;
-    }
-    .footerpages{
-        margin: auto;
-       padding-top: 10px;
-       padding-left: 5px;
-    }
-    .footerpages a{
-        padding-top: 6px;
-    }
-    .footersocialmedia{
-       
-    }
-    .footerinfo{
-       
-    }
-    .footer{
-        justify-content: center;
-        padding-bottom: 60px;;
-    }
-    .socialimage{
-        padding-left: 30px;
-        margin: 0;
+
+/* Dodanie responsywności */
+@media (max-width: 768px) {
+    .footerdiv {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0; /* Zmniejszenie paddingu, gdy układ zmienia się na pionowy */
     }
 
+    .footerpages, .footersocialmedia, .footerinfo {
+        align-items: center;
+        text-align: center; /* Wyrównanie tekstu do środka na małych ekranach */
+        flex-wrap: wrap; /* Pozwolenie na zawijanie sekcji, jeśli jest to konieczne */
+    }
+
+    .footerpages {
+        flex-direction: row;
+        justify-content: center;
+        white-space: normal; /* Pozwala na zawijanie tekstu na mniejszych ekranach */
+    }
+    
+    .footerlink {
+        margin: 10px;
+    }
 }

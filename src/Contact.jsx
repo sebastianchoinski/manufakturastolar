@@ -4,12 +4,12 @@ import { Helmet } from 'react-helmet-async';
 
 function Contact(props) {
     return (
-        <div>
+        <div className='maincontactdiv'>
             <Helmet>
         <title>Kontakt | Manufaktura Stolar</title>
         <meta name="description" content="Strona Manufaktury Stolar. Wejdź i dowiedz się więcej!"></meta> 
           </Helmet>
-            <h2 className='contactheader'>Skontaktuj się z nami poprzez formularz</h2>
+            <h2 className='contactheader'>Napisz do nas!</h2>
     <div className='contact-form'>
     <form action="https://formsubmit.co/0ed6151b87d0348dbd82eb3911187d3b" method="POST" enctype="multipart/form-data">
         <div className="form-group">
@@ -32,13 +32,13 @@ function Contact(props) {
     </form>
     </div>
         <div className='othercontactforms'>
-            <h2 className='contactheader'>lub:</h2>
+            {/* <h2 className='contactheader'>lub:</h2>
             <div className='phoneemail'>
                 <div className='textphoneemail'>
                 <a className='formphonenumber' href="tel:123-456-7890"><strong>Zadzwoń :</strong> +48 XXX XXX XXX</a> <br></br><br></br>
                 <a className='formphonenumber' href = "mailto: kontakt@manufaktura-stolar.pl"><strong>Napisz: </strong> kontakt@manufaktura-stolar.pl</a> 
                 </div>
-            </div>
+            </div> */}
         </div>
 
         </div>
